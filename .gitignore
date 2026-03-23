@@ -1,0 +1,13 @@
+# R / renv
+renv/library/
+renv/staging/
+.Rhistory
+.RData
+.Ruserdata
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
