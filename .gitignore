@@ -4,6 +4,7 @@ renv/staging/
 .Rhistory
 .RData
 .Ruserdata
+.renvlock
 
 # Jupyter
 .ipynb_checkpoints/
@@ -11,3 +12,7 @@ renv/staging/
 # OS / editor
 .DS_Store
 Thumbs.db
+
+# Local tooling / generated data
+.codex
+data/processed/
