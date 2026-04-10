@@ -16,3 +16,5 @@ Thumbs.db
 # Local tooling / generated data
 .codex
 data/processed/
+
+.env
