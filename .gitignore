@@ -15,4 +15,6 @@ Thumbs.db
 
 # Local tooling / generated data
 .codex
+.mplconfig/
+**/.mplconfig/
 data/processed/
