@@ -18,3 +18,5 @@ Thumbs.db
 .mplconfig/
 **/.mplconfig/
 data/processed/
+
+.env
