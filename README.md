@@ -10,19 +10,17 @@ Organisation du dépôt:
 
 Le projet est divisé en deux environnements pour tirer profit des meilleures bibliothèques de chaque langage.
 
-Dans le fichier Rendu:
-
+Dans le fichier Rendu (et ordre exécution des fichiers en (.)):
     -un fichier R avec:
-            -shared_data.R (nettoyage des données)
-            -data_GPS (nettoyage des données spécifiquement pour exploiter les données GPS)
-            -Analyse Unidimensionnelle
+            -shared_data.R (nettoyage des données) (1)
+            -Analyse Unidimensionnelle (2)
+            -data_GPS (nettoyage des données spécifiquement pour exploiter les données GPS) (4)
+            -ACP (qu'on réutilise ensuite) (6)
+            -LDA (7)
     -un fichi Python avec:
-            -analyse bidimensionnelle
-
-
-
-Ordre d'exécution des fichiers:
-
+            -analyse bidimensionnelle (3)
+            -visu_carte (5)
+            -CA_MCA (8)
 
 
 Groupe: Romain Deleris, Corentin Brandam, Augustin Traissac, 2026
