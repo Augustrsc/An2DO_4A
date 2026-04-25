@@ -17,10 +17,26 @@ Dans le fichier Rendu (et ordre exécution des fichiers en (.)):
             -data_GPS (nettoyage des données spécifiquement pour exploiter les données GPS) (4)
             -ACP (qu'on réutilise ensuite) (6)
             -LDA (7)
-    -un fichi Python avec:
+            -clustering.ipynb(K-Means et HAC simple directement sur ACP, beaucoup moins efficace que sur du MFA ou MCA) (10)
+
+
+    -un fichier Python avec:
             -analyse bidimensionnelle (3)
             -visu_carte (5)
             -CA_MCA (8)
+            -AD_MFA (avec du clustering dans partie 2, HAC, K-Means) (9)
+            -clustering_acm (HAC, K-Means et GMM sur MCA) (11)
+            -GMM_Python (12)
+
+
+Attendus Oral: 
+
+1. Une soutenance orale par groupe de 3 à 4 étudiant·es.
+— Chaque membre du groupe doit être capable de répondre aux questions sur l’ensemble du projet.
+2. Un dépôt Git contenant l’ensemble des codes nécessaires à la reproduction des analyses et des figures.
+— Unfichier README décrivant l’organisation du dépôt est attendu.
+— Lareproductibilité des résultats sera évaluée.
+— Tout membre du groupe doit être en mesure d’expliquer l’ensemble des codes fournis.
 
 
 Groupe: Romain Deleris, Corentin Brandam, Augustin Traissac, 2026

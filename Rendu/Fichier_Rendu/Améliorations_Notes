@@ -17,15 +17,23 @@ peut être corriger pour que ça fasse moins génére rpar IA mais sinon les gra
 car il est complexe
 
 MFA: même remarques que CA/MCA
-Potentiellement séparer sur un autre fichier la partie clustering
 Expliquer ce qui se passe et chaque plot surtout pour la partie clustering 
 (Les graphes ont l'air top juste il faudra mieux rédiger et expliquer la démarche)
 pas sur du plot de comparaison qui s'appuie pas sur des chiffres mais est juste rédigé par IA
 
+clustering:montrer que pas très efficace, rédiger un peu plus
+
+Clustering_acm: pareil trop générer par IA mais sinon propre
+
+GMM_python: 2 graphes marche pas, pareil rédiger un peu plus 
+
 
 A faire: 
+-ajouter du spetral clustering (je l'ai aps vu), SBM trop compliqué pas la peine je crois
 -comparer les différentes méthodes de clustering
 -en plus de toutes ces modifs, compléter fichier_Oral.ipynb pour l'oral et créer un pdf ou diapo de présentation
 s'appuyant sur ce découpage..
 Potentiellement avec Canva faire un récap des plots les plus importants et de l'analyse pour avoir un rendu clair affichable sur 
 gitHub ou même pour l'oral potentiellement à la place de la diapo.
+-Quand tout finis, arranger le github pour avoir que les fichiers finaux et mettre tout le reste à part dans un dossier 
+brouillon pour que ça soit propre et claire (les profs nous évaluent aussi sur le github et sa propreté)
