@@ -60,7 +60,7 @@ Le travail repose sur une approche hybride :
 | **8** | 🟨 Py | `CA_MCA` | Analyse des Correspondances (Simple et Multiple). |
 | **9** | 🟨 Py | `AD_MFA` | Analyse Factorielle Multiple et Clustering (HAC, K-Means). |
 | **10** | 🟦 R | `clustering.ipynb` | *Note : Approche exploratoire sur ACP (moins performante, regarder plutôt le fichier clustering_acm).* |
-| **11** | 🟨 Py | `GMM_Python` | Modèles de mélanges gaussiens sur ACP(moins performante, regarder plutôt le fichier clustering_acm). |
+| **11** | 🟨 Py | `GMM_Python` | *Note : Modèles de mélanges gaussiens sur ACP (moins performant, regarder plutôt le fichier clustering_acm). |
 | **12** | 🟨 Py | `clustering_acm` | **Cœur du projet** : Comparaison (HAC, K-Means, GMM, Spectral, DBSCAN). |
 
 
