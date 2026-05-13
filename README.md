@@ -106,7 +106,7 @@ Le coeur du projet consiste a comparer plusieurs approches de segmentation :
        `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `plotly`, `prince`, `statsmodels`, `yellowbrick`, `pyreadr`, `graspologic`, `jupyter`.
 
 
-*Projet réalisé dans le cadre d'une 4ème année d'école d'ingénieur en Mathématiques Appliquées à l'INSa Toulouse (4MA-AD).*
+*Projet réalisé dans le cadre d'une 4ème année d'école d'ingénieur en Mathématiques Appliquées à l'INSA Toulouse (4MA-AD).*
 
 
 
