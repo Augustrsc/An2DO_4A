@@ -19,10 +19,9 @@ Ce projet d'étude vise à explorer les structures latentes et les typologies de
 ## 🛠️ Organisation du dépôt
 Le projet utilise une approche hybride, exploitant les forces respectives de **R** (statistique descriptive et inférentielle) et de **Python** (visualisation spatiale et algorithmes de machine learning).
 
-### 📂 Structure des fichiers & Ordre d'exécution
+### 📂 Structure des fichiers & Ordre d'exécution (Fichiers à retrouver dans le dossier Rendu:)
 
 | Ordre | Environnement | Fichier | Description |
-|Fichiers à retrouver dans le dossier Rendu:|
 | **1** | 🟦 R | `shared_data.R` | Nettoyage global et préparation du dataset principal. |
 | **2** | 🟦 R | `Analyse_Unidimensionnelle` | État des lieux descriptif des variables. |
 | **3** | 🟨 Py | `analyse_bidimensionnelle` | Étude des corrélations et croisements de variables. |
