@@ -22,7 +22,7 @@ Le projet utilise une approche hybride, exploitant les forces respectives de **R
 ### 📂 Structure des fichiers & Ordre d'exécution
 
 | Ordre | Environnement | Fichier | Description |
-| :--- | :--- | :--- | :--- |
+|Fichiers à retrouver dans le dossier Rendu:|
 | **1** | 🟦 R | `shared_data.R` | Nettoyage global et préparation du dataset principal. |
 | **2** | 🟦 R | `Analyse_Unidimensionnelle` | État des lieux descriptif des variables. |
 | **3** | 🟨 Py | `analyse_bidimensionnelle` | Étude des corrélations et croisements de variables. |
