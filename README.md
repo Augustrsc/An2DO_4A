@@ -1,66 +1,151 @@
-Adresse de notre travail: git clone https://github.com/Augustrsc/An2DO_4A.git
-    ``
----
+# Analyse des données Parcoursup 2025-2026
 
-# Analyse des données Parcoursup (2025-2026)
+[![R](https://img.shields.io/badge/R-276DC3?logo=r&logoColor=white)](https://www.r-project.org/)
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![Course](https://img.shields.io/badge/UE-Analyse_de_Donn%C3%A9es_(4MA--AD)-C62828)]()
 
-[![R](https://img.shields.io/badge/Language-R-blue.svg)](https://www.r-project.org/)
-[![Python](https://img.shields.io/badge/Language-Python-yellow.svg)](https://www.python.org/)
-[![Course](https://img.shields.io/badge/UE-Analyse_de_Données_(4MA--AD)-red.svg)]()
+> Exploration statistique, analyses factorielles et clustering des formations de l'enseignement superieur francais a partir des donnees Parcoursup.
 
-## 📌 Présentation du projet
-Ce projet d'étude vise à explorer les structures latentes et les typologies des formations de l'enseignement supérieur français. En nous appuyant sur les données de la session **Parcoursup 2025-2026**, nous cherchons à modéliser les relations entre attractivité, profil social oou encore répartition géographique.
+## Vue d'ensemble
+Ce depot rassemble notre projet d'analyse de donnees realise dans le cadre de la 4e annee d'ingenieur en mathematiques appliquees a l'INSA Toulouse.
 
-### ❓ Problématique
-> Comment les facteurs de **sélectivité**, de **mixité sociale** ou encore **localisation géographique** structurent-ils l'offre de formation actuelle ? Existe-t-il une cohérence entre les filières déclarées et les classes statistiques obtenues par clustering ?
+Nous cherchons a mettre en evidence les structures latentes de l'offre de formation en France a partir de la session **Parcoursup 2025-2026**, en croisant plusieurs dimensions :
 
----
+- l'attractivite des formations ;
+- la selectivite et les taux d'acces ;
+- la mixite sociale ;
+- les profils de baccalaureat ;
+- la repartition geographique.
 
-## 🛠️ Organisation du dépôt
-Le projet utilise une approche hybride, exploitant les forces respectives de **R** (statistique descriptive et inférentielle) et de **Python** (visualisation spatiale et algorithmes de machine learning).
+## Problematique
+> Comment les facteurs de **selectivite**, de **mixite sociale** et de **localisation geographique** structurent-ils l'offre de formation actuelle ?  
+> Existe-t-il une coherence entre les filieres declarees et les classes statistiques obtenues par clustering ?
 
-### 📂 Structure des fichiers & Ordre d'exécution (Fichiers à retrouver dans le dossier Rendu:)
+## Objectifs
 
-| Ordre | Environnement | Fichier | Description |
-| :--- | :--- | :--- | :--- |
-| **1** | 🟦 R | `shared_data.R` | Nettoyage global et préparation du dataset principal. |
-| **2** | 🟦 R | `Analyse_Unidimensionnelle` | État des lieux descriptif des variables. |
-| **3** | 🟨 Py | `analyse_bidimensionnelle` | Étude des corrélations et croisements de variables. |
-| **4** | 🟦 R | `data_GPS` | Traitement spécifique des coordonnées géographiques. |
-| **5** | 🟨 Py | `visu_carte` | Cartographie interactive des formations. |
-| **6** | 🟦 R | `ACP` | Analyse en Composantes Principales (base pour la suite). |
-| **7** | 🟦 R | `LDA` | Analyse Discriminante Linéaire. |
-| **8** | 🟨 Py | `CA_MCA` | Analyse des Correspondances (Simple et Multiple). |
-| **9** | 🟨 Py | `AD_MFA` | Analyse Factorielle Multiple et Clustering (HAC, K-Means). |
-| **10** | 🟦 R | `clustering.ipynb` | *Note : Approche exploratoire sur ACP (moins performante, regarder plutôt le fichier clustering_acm).* |
-| **11** | 🟨 Py | `GMM_Python` | Modèles de mélanges gaussiens sur ACP(moins performante, regarder plutôt le fichier clustering_acm). |
-| **12** | 🟨 Py | `clustering_acm` | **Cœur du projet** : Comparaison (HAC, K-Means, GMM, Spectral, DBSCAN). |
+- decrire le jeu de donnees Parcoursup et ses grands equilibres ;
+- comparer plusieurs methodes factorielles pour synthetiser l'information ;
+- produire des typologies de formations robustes par clustering ;
+- confronter les groupes statistiques obtenus a la lecture institutionnelle des filieres.
 
+## Stack du projet
+Le travail repose sur une approche hybride :
 
----
+- **R** pour la preparation des donnees, l'analyse descriptive et certaines analyses statistiques ;
+- **Python** pour les visualisations, les analyses multivariees complementaires et les algorithmes de machine learning ;
+- **Jupyter notebooks** pour documenter l'ensemble du pipeline de facon reproductible.
 
-## 🔬 Méthodologies Clés
+## Methodologie
 
-### 1. Analyses Factorielles
-Nous avons privilégié l'**AFM (Analyse Factorielle Multiple)** et l'**ACM (Analyse des Correspondances Multiples)** pour traiter simultanément des variables qualitatives (types de bacs, régions) et quantitatives (taux d'accès, boursiers).
+### 1. Analyse exploratoire
+Nous commencons par un nettoyage global de la base puis par une lecture unidimensionnelle et bidimensionnelle des variables afin d'identifier :
 
-### 2. Stratégies de Clustering
-Une attention particulière a été portée à la comparaison des performances de segmentation :
-*   **Approches Géométriques :** K-Means et Classification Ascendante Hiérarchique (CAH/HAC).
-*   **Approches Densitaires & Probabilistes :** DBSCAN et GMM (Gaussian Mixture Models).
-*   **Réduction de dimension :** Clustering effectué post-ACM pour stabiliser les classes.
+- les contrastes entre types de formations ;
+- les liens entre attractivite, selectivite et profil social ;
+- les effets de territoire et de localisation.
 
----
+### 2. Analyses factorielles
+Plusieurs methodes de reduction de dimension sont mobilisees selon la nature des variables :
 
-## 🚀 Installation & Utilisation
-1.  **Cloner le dépôt** :
-    ```bash
-    git clone https://github.com/votre-utilisateur/projet-parcoursup.git
-    ```
-2.  **Configuration R** : Assurez-vous d'avoir installé `FactoMineR` et `explor`.
-3.  **Configuration Python** :
-    Voici une proposition pour transformer ton brouillon en un **README.md** professionnel, structuré et visuellement agréable. J'ai réorganisé les informations pour mettre en avant la méthodologie et la complémentarité entre R et Python.
+- **ACP** pour les variables quantitatives ;
+- **ACM / CA** pour les variables qualitatives ;
+- **AFM / MFA** pour articuler plusieurs groupes de variables.
 
+### 3. Clustering
+Le coeur du projet consiste a comparer plusieurs approches de segmentation :
 
-*Projet réalisé dans le cadre d'une 4ème année d'école d'ingénieur en Mathématiques Appliquées à l'INSa Toulouse (4MA-AD).*
+- **K-Means** ;
+- **CAH / HAC** ;
+- **GMM** ;
+- **Spectral Clustering** ;
+- **DBSCAN**.
 
+Une attention particuliere est portee au clustering apres reduction de dimension, notamment apres **ACM**, afin d'obtenir des classes plus stables et plus interpretable.
+
+## Structure du depot
+
+```text
+.
+├── R/                        # Scripts R de preparation
+├── analyses/                 # Notebooks principaux d'analyse
+├── data/raw/                 # Donnees brutes et sources intermediaires
+├── figures/                  # Figures exportees
+├── Rendu/                    # Supports finaux et livrables
+├── pyproject.toml            # Dependances Python
+├── renv.lock                 # Environnement R
+└── README.md
+```
+
+## Parcours de lecture recommande
+Pour suivre le projet dans un ordre logique :
+
+| Etape | Fichier | Description |
+| --- | --- | --- |
+| 1 | `R/shared_data.R` | Nettoyage global et preparation du dataset principal. |
+| 2 | `analyses/Analyse_Uni.ipynb` | Analyse descriptive des variables. |
+| 3 | `analyses/analyse_bidimensionnelle.ipynb` | Croisements et lectures comparees. |
+| 4 | `data/raw/data_GPS.ipynb` | Traitement des coordonnees geographiques. |
+| 5 | `analyses/visu_carte.ipynb` | Cartographie interactive des formations. |
+| 6 | `analyses/ACP.ipynb` ou `analyses/1_ACP.ipynb` | Analyse en composantes principales. |
+| 7 | `analyses/LDA.ipynb` | Analyse discriminante lineaire. |
+| 8 | `analyses/CA_MCA_Parcoursup_python.ipynb` | Analyse des correspondances simple et multiple. |
+| 9 | `analyses/AD_MFA_python.ipynb` | Analyse factorielle multiple. |
+| 10 | `analyses/GMM.ipynb` et `analyses/GMM_python.ipynb` | Modeles de melanges gaussiens. |
+| 11 | `analyses/3_clustering.ipynb` | Premiers essais de segmentation. |
+| 12 | `analyses/clustering_acm.ipynb` | Notebook central de comparaison des clustering. |
+
+## Livrables importants
+
+- `Rendu/Slides_oral.ipynb` : support de presentation du projet ;
+- `Rendu/Fichier_Rendu/` : version finalisee des notebooks et ressources associees ;
+- `analyses/carte.html` et `analyses/carte_multi_habillages.html` : cartes interactives ;
+- `figures/ACP/corrplot.png` : exemple de figure exportee.
+
+## Installation
+
+### Cloner le depot
+```bash
+git clone https://github.com/Augustrsc/An2DO_4A.git
+cd An2DO_4A
+```
+
+### Environnement Python
+Les dependances Python sont definies dans [`pyproject.toml`](/home/gugubre/Projet_analyse_de_donnees_vf/An2DO_4A/pyproject.toml).
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+Bibliotheques principales :
+`pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `plotly`, `prince`, `statsmodels`, `yellowbrick`, `pyreadr`, `graspologic`, `jupyter`.
+
+### Environnement R
+Le projet reference un environnement reproductible via [`renv.lock`](/home/gugubre/Projet_analyse_de_donnees_vf/An2DO_4A/renv.lock).
+
+```r
+install.packages("renv")
+renv::restore()
+```
+
+Packages R centraux :
+`FactoMineR`, `MASS`, `DT` et leurs dependances.
+
+## Resultats vises
+
+- degager une lecture structurelle du paysage Parcoursup ;
+- identifier des regroupements coherents de formations ;
+- comparer plusieurs methodes de segmentation sur une meme base ;
+- relier les classes obtenues aux categories institutionnelles et territoriales.
+
+## Pour commencer rapidement
+Si vous voulez voir le coeur du travail sans tout lire, commencez par :
+
+1. `analyses/clustering_acm.ipynb`
+2. `analyses/visu_carte.ipynb`
+3. `Rendu/Slides_oral.ipynb`
+
+## Cadre academique
+Projet realise dans le cadre de l'UE **Analyse de Donnees (4MA-AD)** a l'**INSA Toulouse**.
